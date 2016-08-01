@@ -83,3 +83,4 @@ if not os.path.exists("inc/plugins"):
 f = open("inc/plugins/" + plugin + ".php","w")
 f.write(original)
 f.close()
+ 
