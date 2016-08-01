@@ -8,7 +8,7 @@ original = '''<?php
  *  %description%
  *
  * @package %name%
- * @author  Paradigm
+ * @author  %author%
  * @version 1.0.0
  */
 
@@ -26,7 +26,7 @@ function %plugin-name%_info()
 		"name"			=> "%name%",
 		"description"	=> "%description%",
 		"website"		=> "%website%",
-		"author"		=> "Paradigm",
+		"author"		=> "%author%",
 		"version"		=> "1.0",
 		"compatibility" => "*"
 	);
@@ -63,12 +63,13 @@ logo = input("""\
 
 """)
 
-
+author = input("Author Name: ")
 name = input("Info Plugin Name: ")
 website = input("Website: ")
 plugin = input("Plugin name(used on functions): ")
 description = input("Plugin Description: ")
 
+original = original.replace("%author%",author)
 original = original.replace("%name%",name)
 original = original.replace("%website%",website)
 original = original.replace("%plugin-name%",plugin)
